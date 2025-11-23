@@ -60,26 +60,89 @@ class FullyCorrectOrgChartRenderer:
         blank_layout = self.prs.slide_layouts[6]
         self.slide = self.prs.slides.add_slide(blank_layout)
         
+    def _should_split_box(self, content):
+        """Determine if a box should be split into title and name boxes."""
+        if not isinstance(content, dict):
+            return False
+
+        # Get all line keys
+        line_keys = sorted([k for k in content.keys() if k.startswith('line_')])
+        if len(line_keys) < 2:
+            return False
+
+        # Check if we have a pattern where last line(s) are names (not bold, different from title)
+        # and earlier lines are titles (often bold or position descriptions)
+        has_bold = False
+        last_line_key = line_keys[-1]
+
+        for key in line_keys[:-1]:
+            if content[key].get('font_weight') == 'bold':
+                has_bold = True
+                break
+
+        # If first lines are bold and last line is not, it's likely title + name
+        last_is_bold = content[last_line_key].get('font_weight') == 'bold'
+
+        return has_bold and not last_is_bold
+
+    def _split_box_content(self, content):
+        """Split content into title lines and name lines."""
+        line_keys = sorted([k for k in content.keys() if k.startswith('line_')])
+
+        # Find the split point - where bold ends
+        split_index = len(line_keys)
+        for i, key in enumerate(line_keys):
+            if content[key].get('font_weight') != 'bold':
+                split_index = i
+                break
+
+        # If no clear split based on bold, assume last line is name
+        if split_index == len(line_keys):
+            split_index = len(line_keys) - 1
+
+        title_content = {}
+        name_content = {}
+
+        for i, key in enumerate(line_keys):
+            if i < split_index:
+                new_key = f'line_{i+1}'
+                title_content[new_key] = content[key]
+            else:
+                new_key = f'line_{i-split_index+1}'
+                name_content[new_key] = content[key]
+
+        return title_content, name_content
+
     def add_box(self, position, style_name, content, box_id=None):
+        """Add a box, potentially splitting into title and name boxes."""
+        # Check if we should split this box
+        if self._should_split_box(content):
+            return self._add_split_boxes(position, style_name, content)
+
+        # Otherwise, add a single box as before
+        return self._add_single_box(position, style_name, content)
+
+    def _add_single_box(self, position, style_name, content):
+        """Add a single box with content."""
         style = self.data['global_styles']['box_styles'].get(style_name, {})
-        
+
         left = self.px_to_inches_x(position['x'])
         top = self.px_to_inches_y(position['y'])
         width = self.px_to_inches_x(position['width'])
         height = self.px_to_inches_y(position['height'])
-        
+
         shape = self.slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, left, top, width, height)
-        
+
         fill = shape.fill
         fill.solid()
         bg_color = style.get('background_color', '#FFFFFF')
         rgb = self.hex_to_rgb(bg_color)
         fill.fore_color.rgb = RGBColor(*rgb)
-        
+
         line = shape.line
         line.color.rgb = RGBColor(0, 0, 0)
         line.width = Pt(0.5)
-        
+
         text_frame = shape.text_frame
         text_frame.word_wrap = True
         text_frame.margin_bottom = Pt(0.5)
@@ -88,7 +151,7 @@ class FullyCorrectOrgChartRenderer:
         text_frame.margin_right = Pt(1)
         text_frame.vertical_anchor = MSO_ANCHOR.MIDDLE
         text_frame.clear()
-        
+
         if isinstance(content, dict):
             line_count = 0
             for key in sorted(content.keys()):
@@ -100,24 +163,24 @@ class FullyCorrectOrgChartRenderer:
                     p.space_after = Pt(0)
                     p.space_before = Pt(0)
                     p.line_spacing = 0.9
-                    
+
                     if p.runs:
                         run = p.runs[0]
                         run.font.name = 'Arial'
                         run.font.size = Pt(line_data.get('font_size', 7))
-                        
+
                         if line_data.get('font_weight') == 'bold':
                             run.font.bold = True
-                        
+
                         text_color = line_data.get('color', style.get('text_color', '#000000'))
                         rgb = self.hex_to_rgb(text_color)
                         run.font.color.rgb = RGBColor(*rgb)
-                        
+
                         if line_data.get('font_style') == 'italic':
                             run.font.italic = True
-                    
+
                     line_count += 1
-        
+
         elif isinstance(content, list):
             for i, line_data in enumerate(content):
                 p = text_frame.paragraphs[0] if i == 0 else text_frame.add_paragraph()
@@ -125,17 +188,44 @@ class FullyCorrectOrgChartRenderer:
                 p.alignment = PP_ALIGN.CENTER
                 p.space_after = Pt(0)
                 p.space_before = Pt(0)
-                
+
                 if p.runs:
                     run = p.runs[0]
                     run.font.name = 'Arial'
                     run.font.size = Pt(line_data.get('font_size', 6))
-                    
+
                     text_color = style.get('text_color', '#000000')
                     rgb = self.hex_to_rgb(text_color)
                     run.font.color.rgb = RGBColor(*rgb)
-        
+
         return shape
+
+    def _add_split_boxes(self, position, style_name, content):
+        """Add two separate boxes - one for title, one for name."""
+        title_content, name_content = self._split_box_content(content)
+
+        # Calculate heights - split roughly 60/40 for title/name
+        total_height = position['height']
+        title_lines = len([k for k in title_content.keys() if k.startswith('line_')])
+        name_lines = len([k for k in name_content.keys() if k.startswith('line_')])
+        total_lines = title_lines + name_lines
+
+        # Proportional height based on number of lines
+        title_height = (title_lines / total_lines) * total_height
+        name_height = (name_lines / total_lines) * total_height
+
+        # Title box (top) - keeps the original style and background
+        title_pos = position.copy()
+        title_pos['height'] = title_height
+        title_box = self._add_single_box(title_pos, style_name, title_content)
+
+        # Name box (bottom) - white background
+        name_pos = position.copy()
+        name_pos['y'] = position['y'] + title_height
+        name_pos['height'] = name_height
+        name_box = self._add_single_box(name_pos, 'support_staff_white', name_content)
+
+        return title_box  # Return title box for connection purposes
     
     def add_line(self, x1, y1, x2, y2):
         connector = self.slide.shapes.add_connector(
