@@ -1,0 +1,2898 @@
+{
+  "document_properties": {
+    "page_size": "A3",
+    "orientation": "landscape",
+    "width_mm": 420,
+    "height_mm": 297,
+    "width_px": 843,
+    "height_px": 596.25,
+    "margins": {
+      "top": 10,
+      "right": 10,
+      "bottom": 10,
+      "left": 10
+    }
+  },
+  "document_header": {
+    "logo": {
+      "type": "image",
+      "position": "top_left",
+      "content": "BT GROUP logo",
+      "width": 80,
+      "height": 30
+    },
+    "title": {
+      "text": "Projects Delivery\nOrganization Chart",
+      "font_family": "Arial",
+      "font_size": 11,
+      "font_weight": "normal",
+      "color": "#000000",
+      "position": "top_left_below_logo",
+      "alignment": "left"
+    }
+  },
+  "global_styles": {
+    "box_styles": {
+      "top_management": {
+        "background_color": "#A8D08D",
+        "border_color": "#000000",
+        "border_width": 1,
+        "border_style": "solid",
+        "text_color": "#000000",
+        "font_family": "Arial",
+        "font_size": 9,
+        "font_weight": "bold",
+        "padding": 3,
+        "text_align": "center"
+      },
+      "project_manager": {
+        "background_color": "#F4B183",
+        "border_color": "#000000",
+        "border_width": 1,
+        "border_style": "solid",
+        "text_color": "#000000",
+        "font_family": "Arial",
+        "font_size": 8,
+        "font_weight": "bold",
+        "padding": 3,
+        "text_align": "center"
+      },
+      "zone_manager": {
+        "background_color": "#F4B183",
+        "border_color": "#000000",
+        "border_width": 1,
+        "border_style": "solid",
+        "text_color": "#000000",
+        "font_family": "Arial",
+        "font_size": 8,
+        "font_weight": "normal",
+        "padding": 3,
+        "text_align": "center"
+      },
+      "technical_staff": {
+        "background_color": "#808080",
+        "border_color": "#000000",
+        "border_width": 1,
+        "border_style": "solid",
+        "text_color": "#FFFFFF",
+        "font_family": "Arial",
+        "font_size": 7,
+        "font_weight": "normal",
+        "padding": 2,
+        "text_align": "center"
+      },
+      "support_staff_white": {
+        "background_color": "#FFFFFF",
+        "border_color": "#000000",
+        "border_width": 1,
+        "border_style": "solid",
+        "text_color": "#000000",
+        "font_family": "Arial",
+        "font_size": 7,
+        "font_weight": "normal",
+        "padding": 2,
+        "text_align": "center"
+      },
+      "manpower_box": {
+        "background_color": "#FFFFFF",
+        "border_color": "#000000",
+        "border_width": 1,
+        "border_style": "solid",
+        "text_color": "#000000",
+        "font_family": "Arial",
+        "font_size": 6,
+        "font_weight": "normal",
+        "padding": 2,
+        "text_align": "center"
+      }
+    },
+    "connector_lines": {
+      "line_color": "#000000",
+      "line_width": 1,
+      "line_style": "solid"
+    },
+    "text_styles": {
+      "position_title": {
+        "font_family": "Arial",
+        "font_size": 7,
+        "font_weight": "normal",
+        "color": "#000000"
+      },
+      "name": {
+        "font_family": "Arial",
+        "font_size": 7,
+        "font_weight": "normal",
+        "color": "#000000"
+      },
+      "count_label": {
+        "font_family": "Arial",
+        "font_size": 6,
+        "font_weight": "normal",
+        "color": "#000000"
+      }
+    }
+  },
+  "organizational_structure": {
+    "level_1_top_management": {
+      "position": {
+        "x": 400,
+        "y": 50,
+        "width": 150,
+        "height": 30
+      },
+      "style": "top_management",
+      "content": {
+        "line_1": {
+          "text": "Head of Operations &",
+          "font_size": 9,
+          "font_weight": "bold"
+        },
+        "line_2": {
+          "text": "Project Management Division",
+          "font_size": 9,
+          "font_weight": "bold"
+        },
+        "line_3": {
+          "text": "Ahmed Taha",
+          "font_size": 9,
+          "font_weight": "normal"
+        }
+      },
+      "connections": {
+        "line_down_to": ["admin_support", "projects_management"]
+      }
+    },
+    "level_2_departments": [
+      {
+        "id": "admin_support",
+        "position": {
+          "x": 300,
+          "y": 100,
+          "width": 100,
+          "height": 20
+        },
+        "style": "support_staff_white",
+        "content": {
+          "line_1": {
+            "text": "Admin & Support Function",
+            "font_size": 7
+          },
+          "line_2": {
+            "text": "Saheedh Chockli",
+            "font_size": 7
+          }
+        },
+        "connections": {
+          "line_from": "level_1_top_management"
+        }
+      },
+      {
+        "id": "projects_management",
+        "position": {
+          "x": 450,
+          "y": 100,
+          "width": 120,
+          "height": 30
+        },
+        "style": "support_staff_white",
+        "content": {
+          "line_1": {
+            "text": "Projects Management",
+            "font_size": 8,
+            "font_weight": "normal"
+          },
+          "line_2": {
+            "text": "& Planning",
+            "font_size": 8,
+            "font_weight": "normal"
+          },
+          "line_3": {
+            "text": "Ahmed Hamed",
+            "font_size": 8,
+            "font_weight": "normal"
+          }
+        },
+        "connections": {
+          "line_from": "level_1_top_management",
+          "line_down_to": ["senior_technical_engineer_1", "qdc", "planning_engineer_1", "technical_engineer_1"]
+        }
+      }
+    ],
+    "level_3_project_staff": [
+      {
+        "id": "senior_technical_engineer_1",
+        "position": {
+          "x": 400,
+          "y": 150,
+          "width": 80,
+          "height": 20
+        },
+        "style": "technical_staff",
+        "content": {
+          "line_1": {
+            "text": "Senior Technical",
+            "font_size": 7,
+            "color": "#FFFFFF"
+          },
+          "line_2": {
+            "text": "Engineer",
+            "font_size": 7,
+            "color": "#FFFFFF"
+          },
+          "line_3": {
+            "text": "Haitham Omar",
+            "font_size": 7,
+            "color": "#FFFFFF"
+          }
+        },
+        "connections": {
+          "line_from": "projects_management"
+        }
+      },
+      {
+        "id": "qdc",
+        "position": {
+          "x": 500,
+          "y": 150,
+          "width": 80,
+          "height": 20
+        },
+        "style": "technical_staff",
+        "content": {
+          "line_1": {
+            "text": "QDC",
+            "font_size": 7,
+            "color": "#FFFFFF"
+          },
+          "line_2": {
+            "text": "Mohamed Abdul Hameed",
+            "font_size": 7,
+            "color": "#FFFFFF"
+          }
+        },
+        "connections": {
+          "line_from": "projects_management"
+        }
+      },
+      {
+        "id": "planning_engineer_1",
+        "position": {
+          "x": 600,
+          "y": 150,
+          "width": 80,
+          "height": 20
+        },
+        "style": "support_staff_white",
+        "content": {
+          "line_1": {
+            "text": "Planning Engineer",
+            "font_size": 7
+          },
+          "line_2": {
+            "text": "Vacant",
+            "font_size": 7,
+            "font_style": "italic"
+          }
+        },
+        "connections": {
+          "line_from": "projects_management"
+        }
+      },
+      {
+        "id": "technical_engineer_1",
+        "position": {
+          "x": 450,
+          "y": 190,
+          "width": 80,
+          "height": 20
+        },
+        "style": "support_staff_white",
+        "content": {
+          "line_1": {
+            "text": "Technical Engineer",
+            "font_size": 7
+          },
+          "line_2": {
+            "text": "Mohamed Tourkistani",
+            "font_size": 7
+          }
+        },
+        "connections": {
+          "line_from": "projects_management"
+        }
+      }
+    ],
+    "main_project_divisions": {
+      "division_header": {
+        "position": {
+          "x": 50,
+          "y": 180,
+          "width": 700,
+          "height": 15
+        },
+        "style": {
+          "background_color": "#FFFFFF",
+          "border_color": "#000000",
+          "border_width": 1
+        },
+        "content": {
+          "text": "Serving Shamiyah Mataf & CUC Projects",
+          "font_size": 10,
+          "font_weight": "bold",
+          "text_align": "center"
+        }
+      },
+      "divisions": [
+        {
+          "id": "lc_sme",
+          "division_header": {
+            "position": {
+              "x": 50,
+              "y": 210,
+              "width": 100,
+              "height": 20
+            },
+            "style": "project_manager",
+            "content": {
+              "line_1": {
+                "text": "LC (SME*)",
+                "font_size": 8,
+                "font_weight": "bold"
+              },
+              "line_2": {
+                "text": "Sameh El Wazeer",
+                "font_size": 8,
+                "font_weight": "normal"
+              }
+            }
+          },
+          "staff": [
+            {
+              "position": {
+                "x": 30,
+                "y": 250,
+                "width": 70,
+                "height": 18
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Technical Engineer",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Bekshan Basheer",
+                  "font_size": 7
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 110,
+                "y": 250,
+                "width": 70,
+                "height": 18
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Technical Engineer",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Sayed Qadri",
+                  "font_size": 7
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 30,
+                "y": 280,
+                "width": 70,
+                "height": 18
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Senior Draftman (site",
+                  "font_size": 6
+                },
+                "line_2": {
+                  "text": "support)",
+                  "font_size": 6
+                },
+                "line_3": {
+                  "text": "Abdul Latheef",
+                  "font_size": 7
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 110,
+                "y": 280,
+                "width": 70,
+                "height": 18
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Mohamed Fawzy Attiya",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 30,
+                "y": 310,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Aumaih Yahya",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 90,
+                "y": 310,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Sayed A. Safi",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 150,
+                "y": 310,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Ameen Mohamed",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 30,
+                "y": 335,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Mohamed Abdul",
+                  "font_size": 6
+                },
+                "line_3": {
+                  "text": "Rahman",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 90,
+                "y": 335,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Sayed Shahzad",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 150,
+                "y": 335,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Mohamed Burhan",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 210,
+                "y": 335,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Ali Kamel",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 270,
+                "y": 335,
+                "width": 40,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Driver",
+                  "font_size": 7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "fas_sme",
+          "division_header": {
+            "position": {
+              "x": 320,
+              "y": 210,
+              "width": 100,
+              "height": 20
+            },
+            "style": "project_manager",
+            "content": {
+              "line_1": {
+                "text": "FAS (SME*)",
+                "font_size": 8,
+                "font_weight": "bold"
+              },
+              "line_2": {
+                "text": "Hazem Abdullah",
+                "font_size": 8,
+                "font_weight": "normal"
+              }
+            }
+          },
+          "staff": [
+            {
+              "position": {
+                "x": 270,
+                "y": 250,
+                "width": 80,
+                "height": 18
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Technical Manager",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Mustafa Abdul Hadi",
+                  "font_size": 7
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 360,
+                "y": 250,
+                "width": 80,
+                "height": 18
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "T&C Manager",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Ahmed Rabie",
+                  "font_size": 7
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 330,
+                "y": 280,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "T&C Eng",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Vacant",
+                  "font_size": 7,
+                  "font_style": "italic",
+                  "color": "#FF0000"
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 390,
+                "y": 280,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "T&C Eng",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Vacant",
+                  "font_size": 7,
+                  "font_style": "italic",
+                  "color": "#FF0000"
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 450,
+                "y": 280,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "T&C Eng",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Vacant",
+                  "font_size": 7,
+                  "font_style": "italic",
+                  "color": "#FF0000"
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 270,
+                "y": 310,
+                "width": 70,
+                "height": 18
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Senior Technical",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Engineer",
+                  "font_size": 7
+                },
+                "line_3": {
+                  "text": "Mohamed Abdul",
+                  "font_size": 6
+                },
+                "line_4": {
+                  "text": "Latheef",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 350,
+                "y": 310,
+                "width": 70,
+                "height": 18
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Senior Technical",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Engineer",
+                  "font_size": 7
+                },
+                "line_3": {
+                  "text": "Mahmoud Murammish",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 270,
+                "y": 340,
+                "width": 70,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Technical Engineer",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Aseel Althobaty",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 350,
+                "y": 340,
+                "width": 60,
+                "height": 20
+              },
+              "style": "technical_staff",
+              "content": {
+                "line_1": {
+                  "text": "DCC",
+                  "font_size": 7,
+                  "color": "#FFFFFF"
+                },
+                "line_2": {
+                  "text": "Waleed Najjar",
+                  "font_size": 6,
+                  "color": "#FFFFFF"
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 330,
+                "y": 370,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Waleed Najjar",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 390,
+                "y": 370,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Amr Mahmoud",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 450,
+                "y": 370,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Ahmed El Sawy",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 270,
+                "y": 400,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Abdul Hai Noman",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 330,
+                "y": 400,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Mohamed Mosawir",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 390,
+                "y": 400,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Mahmoud Dosoky",
+                  "font_size": 6
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "sound_sme",
+          "division_header": {
+            "position": {
+              "x": 520,
+              "y": 210,
+              "width": 100,
+              "height": 20
+            },
+            "style": "project_manager",
+            "content": {
+              "line_1": {
+                "text": "Sound (SME*)",
+                "font_size": 8,
+                "font_weight": "bold"
+              },
+              "line_2": {
+                "text": "Khalid Hassan Said",
+                "font_size": 8,
+                "font_weight": "normal"
+              }
+            }
+          },
+          "staff": [
+            {
+              "position": {
+                "x": 480,
+                "y": 250,
+                "width": 80,
+                "height": 18
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Senior Network",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Architecht",
+                  "font_size": 7
+                },
+                "line_3": {
+                  "text": "Faisal Ilyas",
+                  "font_size": 7
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 570,
+                "y": 250,
+                "width": 80,
+                "height": 18
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Senior Audio",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Engineer",
+                  "font_size": 7
+                },
+                "line_3": {
+                  "text": "Ramy Abdul Fattah",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 480,
+                "y": 280,
+                "width": 80,
+                "height": 18
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Senior Audio",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Engineer",
+                  "font_size": 7
+                },
+                "line_3": {
+                  "text": "Alaa Abdul Jawwad",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 570,
+                "y": 280,
+                "width": 80,
+                "height": 18
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "QA & QC Inspector",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Hazem Abdullah",
+                  "font_size": 7
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 520,
+                "y": 310,
+                "width": 60,
+                "height": 20
+              },
+              "style": "technical_staff",
+              "content": {
+                "line_1": {
+                  "text": "DCC",
+                  "font_size": 7,
+                  "color": "#FFFFFF"
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 500,
+                "y": 340,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Waleed Najjar",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 560,
+                "y": 340,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Kasef Syas",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 480,
+                "y": 370,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Mohamed Abdul",
+                  "font_size": 6
+                },
+                "line_3": {
+                  "text": "Salam",
+                  "font_size": 6
+                }
+              }
+            },
+            {
+              "position": {
+                "x": 540,
+                "y": 370,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Draftman",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Sayed Mubashir",
+                  "font_size": 6
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "project_sections": [
+      {
+        "project_name": "Mataf Expansion Project",
+        "project_manager": {
+          "position": {
+            "x": 50,
+            "y": 430,
+            "width": 120,
+            "height": 25
+          },
+          "style": "project_manager",
+          "content": {
+            "line_1": {
+              "text": "Mataf Expansion",
+              "font_size": 9,
+              "font_weight": "bold"
+            },
+            "line_2": {
+              "text": "Project Manager",
+              "font_size": 8,
+              "font_weight": "bold"
+            },
+            "line_3": {
+              "text": "Mohamed Fawzy Attiya",
+              "font_size": 8,
+              "font_weight": "normal"
+            }
+          }
+        },
+        "zones": [
+          {
+            "zone_id": "zone_1_acm",
+            "zone_header": {
+              "position": {
+                "x": 30,
+                "y": 470,
+                "width": 80,
+                "height": 20
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Zone 1",
+                  "font_size": 8
+                },
+                "line_2": {
+                  "text": "ACM",
+                  "font_size": 8
+                }
+              }
+            },
+            "zone_manager": {
+              "position": {
+                "x": 30,
+                "y": 495,
+                "width": 80,
+                "height": 18
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Zone Manager",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Ahmed Ghabri",
+                  "font_size": 7
+                }
+              }
+            },
+            "site_engineer": {
+              "position": {
+                "x": 30,
+                "y": 518,
+                "width": 80,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Site Engineer",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Mahmoud Al Masry",
+                  "font_size": 6
+                }
+              }
+            },
+            "sub_zones": [
+              {
+                "zone_name": "Zone 1",
+                "position": {
+                  "x": 10,
+                  "y": 545,
+                  "width": 50,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "Zone 1",
+                    "font_size": 7
+                  },
+                  "line_2": {
+                    "text": "Syed Mustafa",
+                    "font_size": 6
+                  }
+                }
+              },
+              {
+                "zone_name": "Zone 2",
+                "position": {
+                  "x": 70,
+                  "y": 545,
+                  "width": 50,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "Zone 2",
+                    "font_size": 7
+                  },
+                  "line_2": {
+                    "text": "Sayed Nouralhashimi",
+                    "font_size": 6
+                  }
+                }
+              }
+            ],
+            "manpower_summary": {
+              "position": {
+                "x": 10,
+                "y": 565,
+                "width": 110,
+                "height": 40
+              },
+              "style": "manpower_box",
+              "content": [
+                {
+                  "line": "Engineer (2)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Foreman (2)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Technician (16)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Driver (1)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Manpower + 122",
+                  "font_size": 6
+                },
+                {
+                  "line": "Manpower + 113",
+                  "font_size": 6
+                }
+              ]
+            }
+          },
+          {
+            "zone_id": "bridge_zone",
+            "zone_header": {
+              "position": {
+                "x": 140,
+                "y": 470,
+                "width": 80,
+                "height": 20
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Bridge",
+                  "font_size": 8
+                },
+                "line_2": {
+                  "text": "Zone",
+                  "font_size": 8
+                }
+              }
+            },
+            "zone_manager": {
+              "position": {
+                "x": 140,
+                "y": 495,
+                "width": 80,
+                "height": 18
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Zone Manager",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Ehab Ali Dawood N",
+                  "font_size": 6
+                }
+              }
+            },
+            "site_supervisor": {
+              "position": {
+                "x": 140,
+                "y": 518,
+                "width": 80,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Site Supervisor",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Mahmoud Al Masry",
+                  "font_size": 6
+                }
+              }
+            },
+            "head_technician": {
+              "position": {
+                "x": 140,
+                "y": 538,
+                "width": 80,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Tamer Mohamed",
+                  "font_size": 7
+                }
+              }
+            },
+            "technicians": {
+              "position": {
+                "x": 120,
+                "y": 558,
+                "width": 120,
+                "height": 40
+              },
+              "style": "manpower_box",
+              "content": {
+                "title": {
+                  "text": "Technician (16)",
+                  "font_size": 7,
+                  "font_weight": "bold"
+                },
+                "names": [
+                  "Mudassir sayed hussein",
+                  "Aleemudh",
+                  "een Ramy",
+                  "Ali ahmed",
+                  "Faiz",
+                  "Mohamed",
+                  "Tahir",
+                  "Saeed Qithmy"
+                ],
+                "font_size": 5
+              }
+            },
+            "sub_zones": [
+              {
+                "zone_name": "Zone 3",
+                "position": {
+                  "x": 250,
+                  "y": 545,
+                  "width": 50,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "Zone 3",
+                    "font_size": 7
+                  },
+                  "line_2": {
+                    "text": "Waleed Atani",
+                    "font_size": 6
+                  }
+                }
+              },
+              {
+                "zone_name": "Zone 4",
+                "position": {
+                  "x": 310,
+                  "y": 545,
+                  "width": 50,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "Zone 4",
+                    "font_size": 7
+                  },
+                  "line_2": {
+                    "text": "Ibrahim Atani",
+                    "font_size": 6
+                  }
+                }
+              }
+            ],
+            "manpower_summary": {
+              "position": {
+                "x": 250,
+                "y": 565,
+                "width": 110,
+                "height": 30
+              },
+              "style": "manpower_box",
+              "content": [
+                {
+                  "line": "Engineer (3)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Foreman (2)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Technician (10)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Driver (1)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Manpower + 145",
+                  "font_size": 6
+                },
+                {
+                  "line": "Manpower + 110",
+                  "font_size": 6
+                }
+              ]
+            }
+          },
+          {
+            "zone_id": "service_building",
+            "construction_manager": {
+              "position": {
+                "x": 380,
+                "y": 470,
+                "width": 90,
+                "height": 20
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Service",
+                  "font_size": 8
+                },
+                "line_2": {
+                  "text": "Building",
+                  "font_size": 8
+                }
+              }
+            },
+            "construction_manager_detail": {
+              "position": {
+                "x": 380,
+                "y": 495,
+                "width": 90,
+                "height": 18
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Construction Manager",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Eyad Hussam Habbash",
+                  "font_size": 6
+                }
+              }
+            },
+            "site_engineer": {
+              "position": {
+                "x": 380,
+                "y": 518,
+                "width": 90,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Site Engineer",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Tamer Mohamed",
+                  "font_size": 6
+                }
+              }
+            },
+            "sub_zones": [
+              {
+                "zone_name": "Zone 2",
+                "position": {
+                  "x": 380,
+                  "y": 545,
+                  "width": 90,
+                  "height": 15
+                },
+                "style": "manpower_box",
+                "content": {
+                  "line_1": {
+                    "text": "Engineer (2)",
+                    "font_size": 6
+                  },
+                  "line_2": {
+                    "text": "Foreman (1)",
+                    "font_size": 6
+                  },
+                  "line_3": {
+                    "text": "Manpower + 15",
+                    "font_size": 6
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "zone_id": "piazza_zone",
+            "zone_header": {
+              "position": {
+                "x": 490,
+                "y": 470,
+                "width": 80,
+                "height": 20
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Piazza",
+                  "font_size": 8
+                }
+              }
+            },
+            "site_engineer": {
+              "position": {
+                "x": 490,
+                "y": 495,
+                "width": 80,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Site Engineer",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Ahmed Zahrani",
+                  "font_size": 6
+                }
+              }
+            },
+            "sub_zones": [
+              {
+                "zone_name": "FAS",
+                "position": {
+                  "x": 470,
+                  "y": 520,
+                  "width": 50,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "FAS",
+                    "font_size": 7
+                  },
+                  "line_2": {
+                    "text": "Naser Hajmey",
+                    "font_size": 6
+                  }
+                }
+              },
+              {
+                "zone_name": "Zone 3",
+                "position": {
+                  "x": 530,
+                  "y": 520,
+                  "width": 50,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "Zone 3",
+                    "font_size": 7
+                  }
+                }
+              },
+              {
+                "zone_name": "Zone 4",
+                "position": {
+                  "x": 590,
+                  "y": 520,
+                  "width": 50,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "Zone 4",
+                    "font_size": 7
+                  }
+                }
+              }
+            ],
+            "manpower_summary": {
+              "position": {
+                "x": 470,
+                "y": 540,
+                "width": 170,
+                "height": 30
+              },
+              "style": "manpower_box",
+              "content": [
+                {
+                  "line": "Engineer (2) | Foreman (2) | Manpower +45",
+                  "font_size": 6
+                },
+                {
+                  "line": "Engineer (1) | Foreman (1) | Manpower +15",
+                  "font_size": 6
+                },
+                {
+                  "line": "Engineer (1) | Foreman (1) | Manpower +15",
+                  "font_size": 6
+                }
+              ]
+            }
+          },
+          {
+            "zone_id": "foreman_pool",
+            "position": {
+              "x": 30,
+              "y": 610,
+              "width": 100,
+              "height": 30
+            },
+            "style": "manpower_box",
+            "content": {
+              "line_1": {
+                "text": "Foreman (7)",
+                "font_size": 7,
+                "font_weight": "bold"
+              },
+              "line_2": {
+                "text": "Technician (116)",
+                "font_size": 6
+              },
+              "line_3": {
+                "text": "Driver (1)",
+                "font_size": 6
+              }
+            }
+          }
+        ]
+      },
+      {
+        "project_name": "Shamiyah Project",
+        "project_manager": {
+          "position": {
+            "x": 680,
+            "y": 430,
+            "width": 120,
+            "height": 25
+          },
+          "style": "project_manager",
+          "content": {
+            "line_1": {
+              "text": "Shamiyah",
+              "font_size": 9,
+              "font_weight": "bold"
+            },
+            "line_2": {
+              "text": "Project Manager",
+              "font_size": 8,
+              "font_weight": "bold"
+            },
+            "line_3": {
+              "text": "Mohamed Shoman",
+              "font_size": 8,
+              "font_weight": "normal"
+            }
+          }
+        },
+        "zones": [
+          {
+            "zone_id": "zone_1",
+            "zone_manager": {
+              "position": {
+                "x": 650,
+                "y": 470,
+                "width": 80,
+                "height": 20
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Zone 1",
+                  "font_size": 8
+                },
+                "line_2": {
+                  "text": "Zone Manager",
+                  "font_size": 7
+                },
+                "line_3": {
+                  "text": "Mohammed Abdullah",
+                  "font_size": 6
+                }
+              }
+            },
+            "site_engineer": {
+              "position": {
+                "x": 650,
+                "y": 495,
+                "width": 80,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Site Engineer",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Waleed",
+                  "font_size": 6
+                }
+              }
+            },
+            "sub_zones": [
+              {
+                "zone_name": "Piazza",
+                "position": {
+                  "x": 630,
+                  "y": 520,
+                  "width": 60,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "Piazza",
+                    "font_size": 7
+                  },
+                  "line_2": {
+                    "text": "Bilal Hegazy",
+                    "font_size": 6
+                  }
+                }
+              },
+              {
+                "zone_name": "N Bridge",
+                "position": {
+                  "x": 700,
+                  "y": 520,
+                  "width": 60,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "N Bridge",
+                    "font_size": 7
+                  },
+                  "line_2": {
+                    "text": "Lee Hassanain",
+                    "font_size": 6
+                  }
+                }
+              }
+            ],
+            "manpower_summary": {
+              "position": {
+                "x": 630,
+                "y": 540,
+                "width": 130,
+                "height": 25
+              },
+              "style": "manpower_box",
+              "content": [
+                {
+                  "line": "Engineer (1) | Foreman (1) | Manpower +32",
+                  "font_size": 6
+                },
+                {
+                  "line": "Engineer (1) | Foreman (1) | Manpower +8",
+                  "font_size": 6
+                }
+              ]
+            }
+          },
+          {
+            "zone_id": "zone_2",
+            "zone_header": {
+              "position": {
+                "x": 650,
+                "y": 575,
+                "width": 60,
+                "height": 18
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Zone 2",
+                  "font_size": 8
+                }
+              }
+            },
+            "site_engineer": {
+              "position": {
+                "x": 650,
+                "y": 598,
+                "width": 60,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Site Engineer",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Vacant",
+                  "font_size": 7,
+                  "font_style": "italic",
+                  "color": "#FF0000"
+                }
+              }
+            },
+            "sub_zones": [
+              {
+                "zone_name": "SVB",
+                "position": {
+                  "x": 720,
+                  "y": 575,
+                  "width": 60,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "SVB",
+                    "font_size": 7
+                  },
+                  "line_2": {
+                    "text": "Dawood Gamey",
+                    "font_size": 6
+                  }
+                }
+              }
+            ],
+            "manpower_summary": {
+              "position": {
+                "x": 720,
+                "y": 595,
+                "width": 80,
+                "height": 20
+              },
+              "style": "manpower_box",
+              "content": [
+                {
+                  "line": "Engineer (3)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Foreman (3)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Manpower +42",
+                  "font_size": 6
+                }
+              ]
+            }
+          },
+          {
+            "zone_id": "qc_wcc",
+            "position": {
+              "x": 810,
+              "y": 470,
+              "width": 70,
+              "height": 18
+            },
+            "style": "support_staff_white",
+            "content": {
+              "line_1": {
+                "text": "QC & WCC",
+                "font_size": 7
+              },
+              "line_2": {
+                "text": "Abdul Rahman Zahrani",
+                "font_size": 6
+              }
+            }
+          },
+          {
+            "zone_id": "safety",
+            "position": {
+              "x": 810,
+              "y": 495,
+              "width": 70,
+              "height": 18
+            },
+            "style": "support_staff_white",
+            "content": {
+              "line_1": {
+                "text": "Safety",
+                "font_size": 7
+              },
+              "line_2": {
+                "text": "Mohamed Abdullah",
+                "font_size": 6
+              },
+              "line_3": {
+                "text": "Kashkoul",
+                "font_size": 6
+              }
+            }
+          },
+          {
+            "zone_id": "admin_support",
+            "position": {
+              "x": 810,
+              "y": 520,
+              "width": 70,
+              "height": 18
+            },
+            "style": "support_staff_white",
+            "content": {
+              "line_1": {
+                "text": "Admin & Support",
+                "font_size": 7
+              },
+              "line_2": {
+                "text": "Function",
+                "font_size": 7
+              }
+            },
+            "sub_item": {
+              "position": {
+                "x": 810,
+                "y": 543,
+                "width": 70,
+                "height": 12
+              },
+              "style": "manpower_box",
+              "content": {
+                "line_1": {
+                  "text": "Driver (1)",
+                  "font_size": 6
+                }
+              }
+            }
+          },
+          {
+            "zone_id": "fas",
+            "zone_header": {
+              "position": {
+                "x": 790,
+                "y": 575,
+                "width": 50,
+                "height": 18
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "FAS",
+                  "font_size": 8
+                }
+              }
+            },
+            "site_engineer": {
+              "position": {
+                "x": 790,
+                "y": 598,
+                "width": 50,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Site Engineer",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Anwar Saleh",
+                  "font_size": 6
+                }
+              }
+            },
+            "manpower_summary": {
+              "position": {
+                "x": 850,
+                "y": 575,
+                "width": 100,
+                "height": 40
+              },
+              "style": "manpower_box",
+              "content": [
+                {
+                  "line": "QC & WCC",
+                  "font_size": 6,
+                  "font_weight": "bold"
+                },
+                {
+                  "line": "Engineer (2)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Foreman (1)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Manpower +15",
+                  "font_size": 6
+                },
+                {
+                  "line": "Expansion & Service Building",
+                  "font_size": 6,
+                  "font_weight": "bold"
+                },
+                {
+                  "line": "Engineer (2)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Foreman (4)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Manpower +50",
+                  "font_size": 6
+                }
+              ]
+            }
+          },
+          {
+            "zone_id": "sound_system_om",
+            "construction_manager": {
+              "position": {
+                "x": 650,
+                "y": 630,
+                "width": 100,
+                "height": 20
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Sound System O&M",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Manager",
+                  "font_size": 7
+                },
+                "line_3": {
+                  "text": "Ahmed Sami Hotail",
+                  "font_size": 6
+                }
+              }
+            },
+            "staff": [
+              {
+                "position": {
+                  "x": 620,
+                  "y": 660,
+                  "width": 60,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "QC Manager",
+                    "font_size": 7
+                  },
+                  "line_2": {
+                    "text": "Mohamed Ghabban",
+                    "font_size": 6
+                  }
+                }
+              },
+              {
+                "position": {
+                  "x": 690,
+                  "y": 660,
+                  "width": 70,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "Senior Technical",
+                    "font_size": 6
+                  },
+                  "line_2": {
+                    "text": "Engineer",
+                    "font_size": 6
+                  },
+                  "line_3": {
+                    "text": "Nadir Kamal",
+                    "font_size": 6
+                  }
+                }
+              },
+              {
+                "position": {
+                  "x": 770,
+                  "y": 660,
+                  "width": 70,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "Senior Technical",
+                    "font_size": 6
+                  },
+                  "line_2": {
+                    "text": "Engineer",
+                    "font_size": 6
+                  },
+                  "line_3": {
+                    "text": "Mohamed Shennawi",
+                    "font_size": 6
+                  }
+                }
+              },
+              {
+                "position": {
+                  "x": 850,
+                  "y": 660,
+                  "width": 60,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "Technical Engineer",
+                    "font_size": 6
+                  },
+                  "line_2": {
+                    "text": "Mohamed Hasanin",
+                    "font_size": 6
+                  }
+                }
+              },
+              {
+                "position": {
+                  "x": 620,
+                  "y": 685,
+                  "width": 60,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "QS Engineer",
+                    "font_size": 7
+                  },
+                  "line_2": {
+                    "text": "Islam Kamal",
+                    "font_size": 6
+                  }
+                }
+              },
+              {
+                "position": {
+                  "x": 690,
+                  "y": 685,
+                  "width": 60,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "ADMIN",
+                    "font_size": 7
+                  },
+                  "line_2": {
+                    "text": "Ahmed Zahrani",
+                    "font_size": 6
+                  }
+                }
+              }
+            ],
+            "additional_staff": {
+              "position": {
+                "x": 770,
+                "y": 685,
+                "width": 140,
+                "height": 40
+              },
+              "style": "manpower_box",
+              "content": {
+                "names": [
+                  "Abdurahman Safar",
+                  "Rami AlGhamdi",
+                  "Isa Hawsawy",
+                  "Abdul Majeed Batarfi",
+                  "Mohamed Shami Masri",
+                  "Abdul Majeed Moqdmi",
+                  "Mahmoud Ahmed",
+                  "Asim naif Althonbathy",
+                  "Khaled Zahrani"
+                ],
+                "font_size": 5
+              }
+            }
+          }
+        ]
+      },
+      {
+        "project_name": "CUC Project",
+        "project_manager": {
+          "position": {
+            "x": 960,
+            "y": 430,
+            "width": 120,
+            "height": 25
+          },
+          "style": "project_manager",
+          "content": {
+            "line_1": {
+              "text": "CUC",
+              "font_size": 9,
+              "font_weight": "bold"
+            },
+            "line_2": {
+              "text": "Project Manager",
+              "font_size": 8,
+              "font_weight": "bold"
+            },
+            "line_3": {
+              "text": "Hazem Abdullah",
+              "font_size": 8,
+              "font_weight": "normal"
+            }
+          }
+        },
+        "zones": [
+          {
+            "zone_id": "zone_1_fas",
+            "zone_header": {
+              "position": {
+                "x": 930,
+                "y": 470,
+                "width": 70,
+                "height": 18
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Zone 1",
+                  "font_size": 8
+                },
+                "line_2": {
+                  "text": "FAS",
+                  "font_size": 8
+                }
+              }
+            },
+            "site_engineer": {
+              "position": {
+                "x": 930,
+                "y": 493,
+                "width": 70,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Site Engineer",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Amani Habib",
+                  "font_size": 6
+                }
+              }
+            },
+            "manpower_summary": {
+              "position": {
+                "x": 930,
+                "y": 513,
+                "width": 70,
+                "height": 25
+              },
+              "style": "manpower_box",
+              "content": [
+                {
+                  "line": "Engineer (1)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Foreman (1)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Manpower +60",
+                  "font_size": 6
+                }
+              ]
+            }
+          },
+          {
+            "zone_id": "zone_4_fas",
+            "zone_header": {
+              "position": {
+                "x": 1010,
+                "y": 470,
+                "width": 70,
+                "height": 18
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Zone 4",
+                  "font_size": 8
+                },
+                "line_2": {
+                  "text": "FAS",
+                  "font_size": 8
+                }
+              }
+            },
+            "site_engineer": {
+              "position": {
+                "x": 1010,
+                "y": 493,
+                "width": 70,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Site Engineer",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Vacant",
+                  "font_size": 7,
+                  "font_style": "italic",
+                  "color": "#FF0000"
+                }
+              }
+            },
+            "sub_zones": [
+              {
+                "zone_name": "QA & QC",
+                "position": {
+                  "x": 990,
+                  "y": 520,
+                  "width": 50,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "QA & QC",
+                    "font_size": 7
+                  },
+                  "line_2": {
+                    "text": "Mohamed Hasanin",
+                    "font_size": 6
+                  }
+                }
+              },
+              {
+                "zone_name": "SVB",
+                "position": {
+                  "x": 1050,
+                  "y": 520,
+                  "width": 50,
+                  "height": 15
+                },
+                "style": "support_staff_white",
+                "content": {
+                  "line_1": {
+                    "text": "SVB",
+                    "font_size": 7
+                  },
+                  "line_2": {
+                    "text": "Mahmoud Rabie",
+                    "font_size": 6
+                  }
+                }
+              }
+            ],
+            "manpower_summary": {
+              "position": {
+                "x": 990,
+                "y": 540,
+                "width": 110,
+                "height": 25
+              },
+              "style": "manpower_box",
+              "content": [
+                {
+                  "line": "Engineer (2) | Foreman (1) | Manpower +15",
+                  "font_size": 6
+                },
+                {
+                  "line": "Engineer (2) | Foreman (1) | Manpower +15",
+                  "font_size": 6
+                }
+              ]
+            }
+          },
+          {
+            "zone_id": "zone_4_lc",
+            "zone_header": {
+              "position": {
+                "x": 930,
+                "y": 575,
+                "width": 70,
+                "height": 18
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Zone 4 LC",
+                  "font_size": 8
+                }
+              }
+            },
+            "site_engineer": {
+              "position": {
+                "x": 930,
+                "y": 598,
+                "width": 70,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Site Engineer",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Ahmed Mustamieh",
+                  "font_size": 6
+                }
+              }
+            },
+            "manpower_summary": {
+              "position": {
+                "x": 930,
+                "y": 618,
+                "width": 70,
+                "height": 25
+              },
+              "style": "manpower_box",
+              "content": [
+                {
+                  "line": "Engineer (2)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Foreman (1)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Manpower +15",
+                  "font_size": 6
+                }
+              ]
+            }
+          },
+          {
+            "zone_id": "annex_b_bridge",
+            "zone_header": {
+              "position": {
+                "x": 1010,
+                "y": 575,
+                "width": 70,
+                "height": 18
+              },
+              "style": "zone_manager",
+              "content": {
+                "line_1": {
+                  "text": "Annex B",
+                  "font_size": 8
+                },
+                "line_2": {
+                  "text": "Bridge",
+                  "font_size": 8
+                }
+              }
+            },
+            "site_engineer": {
+              "position": {
+                "x": 1010,
+                "y": 598,
+                "width": 70,
+                "height": 15
+              },
+              "style": "support_staff_white",
+              "content": {
+                "line_1": {
+                  "text": "Site Engineer",
+                  "font_size": 7
+                },
+                "line_2": {
+                  "text": "Iyasa Allami",
+                  "font_size": 6
+                }
+              }
+            },
+            "manpower_summary": {
+              "position": {
+                "x": 1010,
+                "y": 618,
+                "width": 70,
+                "height": 25
+              },
+              "style": "manpower_box",
+              "content": [
+                {
+                  "line": "Foreman (5)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Technician (8)",
+                  "font_size": 6
+                },
+                {
+                  "line": "Driver (1)",
+                  "font_size": 6
+                }
+              ]
+            }
+          },
+          {
+            "zone_id": "ddc",
+            "position": {
+              "x": 1090,
+              "y": 575,
+              "width": 60,
+              "height": 18
+            },
+            "style": "support_staff_white",
+            "content": {
+              "line_1": {
+                "text": "DDC",
+                "font_size": 7
+              },
+              "line_2": {
+                "text": "Iyad Ali",
+                "font_size": 6
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "additional_positions": [
+      {
+        "id": "construction_manager_habib",
+        "position": {
+          "x": 250,
+          "y": 470,
+          "width": 90,
+          "height": 20
+        },
+        "style": "zone_manager",
+        "content": {
+          "line_1": {
+            "text": "Construction Manager",
+            "font_size": 7
+          },
+          "line_2": {
+            "text": "Habib",
+            "font_size": 7
+          }
+        }
+      },
+      {
+        "id": "expansion_building",
+        "position": {
+          "x": 250,
+          "y": 495,
+          "width": 90,
+          "height": 20
+        },
+        "style": "zone_manager",
+        "content": {
+          "line_1": {
+            "text": "Expansion",
+            "font_size": 8
+          },
+          "line_2": {
+            "text": "Building",
+            "font_size": 8
+          }
+        }
+      },
+      {
+        "id": "site_engineer_ahmed_mansour",
+        "position": {
+          "x": 250,
+          "y": 520,
+          "width": 90,
+          "height": 15
+        },
+        "style": "support_staff_white",
+        "content": {
+          "line_1": {
+            "text": "Site Engineer",
+            "font_size": 7
+          },
+          "line_2": {
+            "text": "Ahmed Mansour",
+            "font_size": 6
+          }
+        }
+      },
+      {
+        "id": "expansion_manpower",
+        "position": {
+          "x": 250,
+          "y": 540,
+          "width": 90,
+          "height": 25
+        },
+        "style": "manpower_box",
+        "content": [
+          {
+            "line": "Engineer (3)",
+            "font_size": 6
+          },
+          {
+            "line": "Foreman (2)",
+            "font_size": 6
+          },
+          {
+            "line": "Manpower +45",
+            "font_size": 6
+          }
+        ]
+      },
+      {
+        "id": "piazza_service_building",
+        "position": {
+          "x": 360,
+          "y": 470,
+          "width": 110,
+          "height": 25
+        },
+        "style": "zone_manager",
+        "content": {
+          "line_1": {
+            "text": "Piazza & Service Building",
+            "font_size": 7
+          },
+          "line_2": {
+            "text": "Construction Manager",
+            "font_size": 7
+          },
+          "line_3": {
+            "text": "Mohamed Hamdan Ahmedi",
+            "font_size": 6
+          }
+        }
+      },
+      {
+        "id": "sound_om_vacant",
+        "position": {
+          "x": 360,
+          "y": 500,
+          "width": 110,
+          "height": 20
+        },
+        "style": "zone_manager",
+        "content": {
+          "line_1": {
+            "text": "Sound System O & M",
+            "font_size": 7
+          },
+          "line_2": {
+            "text": "Manager",
+            "font_size": 7
+          },
+          "line_3": {
+            "text": "Vacant",
+            "font_size": 7,
+            "font_style": "italic",
+            "color": "#FF0000"
+          }
+        }
+      },
+      {
+        "id": "site_engineers_group",
+        "positions": [
+          {
+            "position": {
+              "x": 480,
+              "y": 470,
+              "width": 70,
+              "height": 15
+            },
+            "style": "support_staff_white",
+            "content": {
+              "line_1": {
+                "text": "Site Engineer",
+                "font_size": 7
+              },
+              "line_2": {
+                "text": "Mohamed Yusuf Siddik",
+                "font_size": 6
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 560,
+              "y": 470,
+              "width": 70,
+              "height": 15
+            },
+            "style": "support_staff_white",
+            "content": {
+              "line_1": {
+                "text": "Site Engineer",
+                "font_size": 7
+              },
+              "line_2": {
+                "text": "Ibrahim Talal aihindi",
+                "font_size": 6
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 480,
+              "y": 490,
+              "width": 70,
+              "height": 15
+            },
+            "style": "support_staff_white",
+            "content": {
+              "line_1": {
+                "text": "Site Engineer",
+                "font_size": 7
+              },
+              "line_2": {
+                "text": "Waheed Abdul Aziz",
+                "font_size": 6
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "zone_manager_zone_4",
+        "position": {
+          "x": 560,
+          "y": 490,
+          "width": 70,
+          "height": 18
+        },
+        "style": "zone_manager",
+        "content": {
+          "line_1": {
+            "text": "Zone Manager",
+            "font_size": 7
+          },
+          "line_2": {
+            "text": "Zone 4 FAS SVB",
+            "font_size": 6
+          },
+          "line_3": {
+            "text": "Jamal Ali",
+            "font_size": 6
+          }
+        }
+      },
+      {
+        "id": "admin_ddc_group",
+        "position": {
+          "x": 480,
+          "y": 515,
+          "width": 150,
+          "height": 35
+        },
+        "style": "manpower_box",
+        "content": {
+          "title": {
+            "text": "Admin & DDC",
+            "font_size": 7,
+            "font_weight": "bold"
+          },
+          "names": [
+            "Adel Bakr",
+            "Abdullah Bawazeer",
+            "Rahmathullah",
+            "Bahmeesh",
+            "Awni Salama"
+          ],
+          "font_size": 5,
+          "additional": {
+            "text": "Driver (2)",
+            "font_size": 6
+          }
+        }
+      }
+    ]
+  },
+  "footer_legend": {
+    "position": {
+      "x": 750,
+      "y": 720,
+      "width": 150,
+      "height": 15
+    },
+    "style": {
+      "background_color": "#FFFFFF",
+      "border_color": "none",
+      "text_align": "right"
+    },
+    "content": {
+      "text": "SME * Subject Matter Expert",
+      "font_family": "Arial",
+      "font_size": 8,
+      "font_weight": "normal",
+      "color": "#000000"
+    }
+  },
+  "connection_lines": {
+    "line_style": "solid",
+    "line_width": 1,
+    "line_color": "#000000",
+    "connection_type": "hierarchical_tree",
+    "notes": "Lines connect from top of child boxes to bottom of parent boxes with vertical and horizontal segments forming a tree structure"
+  }
+}
